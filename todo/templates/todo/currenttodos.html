@@ -5,17 +5,17 @@
     <ul>
         {% for todo in todos %}
         {% if todo.important %}
-        <li class="important">
-            <a href="{% url 'viewtodo' todo.pk %}"><span class="todo-title">{{ todo.title }}</span><br>
+        <a href="{% url 'viewtodo' todo.pk %}"><li class="important">
+            <span class="todo-title">{{ todo.title }}</span><br>
                 <span class="date-created">{{ todo.date_created }}</span>
-            </a>
         </li>
+        </a>
         {% else %}
-        <li class="normal">
-            <a href="{% url 'viewtodo' todo.pk %}"><span class="todo-title">{{ todo.title }}</span><br>
+        <a href="{% url 'viewtodo' todo.pk %}"><li class="normal">
+            <span class="todo-title">{{ todo.title }}</span><br>
                 <span class="date-created">{{ todo.date_created }}</span>
-            </a>
         </li>
+        </a>
         {% endif %}
         {% endfor %}
     </ul>

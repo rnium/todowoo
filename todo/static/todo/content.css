@@ -8,12 +8,15 @@ div.container ul li {
     text-align: left;
     list-style: none;
     padding: 0.5em 2em;
-    margin: 0px 10% 0.5em;
+    margin: 0px 10% 1em;
     border-radius: 0.3em;
     color: wheat;
 
 }
 
+div.container ul li:hover {
+    box-shadow: 2px 2px 15px aquamarine;
+}
 div.container ul li.normal {
     background-color: rgb(9, 145, 134);
 }
