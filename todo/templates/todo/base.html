@@ -14,9 +14,9 @@
                 </div>
                 <ul class="navitems">
                     {% if user.is_authenticated %}
-                    <li><a href="{% url 'currentodo' %}">Current</a></li>
-                    <li><a href="{% url 'createtodo' %}">Create</a></li>
-                    <li><a href="{% url 'completedtodos' %}">Completed</a></li>
+                    <li><a class="navlink" href="{% url 'currentodo' %}">Current</a></li>
+                    <li><a class="navlink" href="{% url 'createtodo' %}">Create</a></li>
+                    <li><a class="navlink" href="{% url 'completedtodos' %}">Completed</a></li>
                     {% endif %}
                 </ul>
                 <div class="user">

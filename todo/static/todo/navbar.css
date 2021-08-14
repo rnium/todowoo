@@ -57,6 +57,11 @@ a:link, a:visited {
     color: rgb(230, 231, 229);
 }
 
+a.navlink:hover {
+    text-shadow: 1px 1px 10px cyan;
+    font-weight: 600;
+}
+
 span.sitetitle {
     color: antiquewhite;
     padding: 0;

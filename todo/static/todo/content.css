@@ -82,8 +82,7 @@ form .savebutton:hover {
 
 h2 {
     text-align: center;
-    text-shadow: 1px 1px 10px rgb(255, 255, 255);
-    color: rgb(0, 79, 116);
+    color: rgb(66, 255, 255);
     font-size: 2em;
     padding: 0.5em 0 0.5em;
 }
