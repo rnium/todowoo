@@ -1,4 +1,16 @@
 {% extends 'todo/base.html' %}
 {% block content %}
-<div class="container">Welcome to TodoWoo</p>
+{% load static %}
+<div class="container">
+    <div class="intro">
+        <img class="intro-item-1" src="{% static 'todo/logo-neo.svg' %}" width="150" height="150">
+        <div>
+            <h1 class="intro-item-2">TodoWoo... Yeaaah</h1>
+            <p class="intro-item-3">Create and Manage your own Todo lists on the go</p>
+        </div>
+    </div>
+    <div class="intro-info">
+        <p>view project sourcecode:&nbsp;&nbsp;<a href="https://github.com/rnium/todowoo">https://github.com/rnium/todowoo</a></p>
+    </div>
+</div>
 {% endblock content %}

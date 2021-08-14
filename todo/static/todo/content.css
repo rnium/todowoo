@@ -25,6 +25,40 @@ div.container ul li.important {
     background-color: rgb(190, 27, 81);
 }
 
+div.intro {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 7em 25%;
+}
+
+div.intro div {
+    grid-column: 2/4;
+}
+
+.intro-info {
+    background-color: rgb(22, 141, 135);
+    padding: 1em 3em;
+    width: 50%;
+    margin: 10em 25% 0;
+    text-align: center;
+    color: rgb(0, 247, 255);
+    border-radius: 15px;
+}
+
+.intro-info a {
+    text-decoration: underline;
+}
+
+.intro-item-2 {
+    font-size: 2em;
+}
+
+.intro-item-3 {
+    font-size: 1em;
+    color: aquamarine;
+}
+
 span.todo-title {
     font-size: 1.2em;
 }
