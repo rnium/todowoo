@@ -1,0 +1,22 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'todo/auth.css' %}">
+<div>
+    <h2>Login Todowooo</h2>
+    {% if error %}
+    <div class="error">
+        <em>{{ error }}</em>
+    </div>
+    {% endif %}
+    <form class="auth" method="POST">{% csrf_token %}
+        <label>Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label>Password:</label>
+        <input type="password" name="password" id="password" required>
+        <input class="savebutton" type="submit" value="Login">
+    </form>
+    <hr>
+    <p>Need an account? <a href="{% url 'signupuser' %}">SignUp</a> here</p>
+</div>
+{% endblock content %}

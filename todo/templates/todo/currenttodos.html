@@ -1,0 +1,23 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+<h2>Current Todos</h2>
+<div class="container">
+    <ul>
+        {% for todo in todos %}
+        {% if todo.important %}
+        <li class="important">
+            <a href="{% url 'viewtodo' todo.pk %}"><span class="todo-title">{{ todo.title }}</span><br>
+                <span class="date-created">{{ todo.date_created }}</span>
+            </a>
+        </li>
+        {% else %}
+        <li class="normal">
+            <a href="{% url 'viewtodo' todo.pk %}"><span class="todo-title">{{ todo.title }}</span><br>
+                <span class="date-created">{{ todo.date_created }}</span>
+            </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}

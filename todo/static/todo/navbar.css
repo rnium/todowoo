@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+* {
+    font-family: 'Ubuntu', sans-serif;;
+    font-size: 16px;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: rgb(109, 109, 109);
+    overflow-x: hidden;
+}
+
+ul.navitems {
+    padding: 12px 0px;
+}
+ul.navitems li {
+    font-size: 18px;
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+nav {
+    background-color: darkslategrey;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.logotitle .logo {
+    padding: 10px;
+    display: inline-block;
+}
+
+
+.user_buttun {
+    color: wheat;
+    background-color: mediumblue;
+    border-radius: 20px;
+    border: 0px;
+    margin: 10px 0px;
+    padding: 5px;
+    width: 100px;
+    font-size: 14px;
+    transition: 0.2s, box-shadow 0.1s;
+}
+
+.user_buttun:hover {
+    background-color: wheat;
+    color: mediumblue;
+    box-shadow: 0px 0px 5px 5px rgb(50, 116, 116);
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: rgb(230, 231, 229);
+}
+
+span.sitetitle {
+    color: antiquewhite;
+    padding: 0;
+    font-size: 1.4em;
+    padding-left: 0.25em;
+}
+
+div.logotitle {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+div.user {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-gap: 0px 10px;
+}
+
+div.user span {
+    font-weight: 100;
+    color: rgb(0, 177, 177);
+    font-size: 0.9em;
+}
+
+.user_buttun a:link, .user_buttun a:visited {
+    text-decoration: none;
+    color: wheat;
+}
+
+.user_buttun:hover a {
+    color: rgb(77, 77, 167);
+}

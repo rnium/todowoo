@@ -1,0 +1,16 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+<div>
+    <h3>{{ todo.title }}</h3>
+    <form method="POST" action="{% url 'viewtodo' pk %}">{% csrf_token %}
+        {{ form.as_p }}
+        <input class="savebutton" type="submit" value="Save">
+    </form>
+    <form method="POST" action="{% url 'completodo' pk %}" style="display: inline;">{% csrf_token %}
+        <input class="sidebutton completebutton" type="submit" value="Mark as completed">
+    </form>
+    <form method="POST" action="{% url 'deletetodo' pk %}" style="display: inline;">{% csrf_token %}
+        <input class="sidebutton deletebutton" type="submit" value="Delete">
+    </form>
+</div>
+{% endblock content %}

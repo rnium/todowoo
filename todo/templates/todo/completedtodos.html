@@ -1,0 +1,15 @@
+{% extends 'todo/base.html' %}
+{% block content %}
+<h2>Completed Todos</h2>
+<div class="container">
+    <ul>
+        {% for todo in todos %}
+        <li class="completedtodo">
+            <span class="todo-title">{{ todo.title }}</span> <br>
+            <span class="date-added">added:&nbsp;&nbsp;<em>{{ todo.date_created }}</em></span>
+            <span class="date-completed">completed:&nbsp;&nbsp;<em>{{ todo.date_completed }}</em></span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock content %}

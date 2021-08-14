@@ -1,0 +1,38 @@
+.registration #username, .registration #password1, .registration #password2, .auth #username, .auth #password  {
+    width: 40%;
+    margin: 0 30%;
+    background-color: rgb(161, 161, 161);
+    border: 0;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+.registration label, .auth label {
+    display: block;
+    margin: 2em 0 0.3em 30%;
+}
+
+.registration .savebutton, .auth .savebutton {
+    margin-top: 2em;
+}
+
+hr {
+    color: rgb(143, 143, 143);
+    width: 60%;
+    margin: 0.5em 20%;
+}
+
+p {
+    text-align: center;
+    color: rgb(155, 197, 236);
+}
+
+.error {
+    width: 100%;
+    background-color: crimson;
+    border-radius: 0px;
+    color: rgb(255, 205, 215);
+    padding: 0.7em 2em;
+    text-align: center;
+    margin: 0.5em auto;
+}
