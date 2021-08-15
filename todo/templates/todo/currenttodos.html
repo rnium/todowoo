@@ -1,32 +1,42 @@
 {% extends 'todo/base.html' %}
 {% block content %}
-<h2>Current Todos</h2>
+{% load static %}
+<h2>Current Todos&nbsp;({{ totaltodos }})</h2>
 <div class="container">
-    {% if isempty %}
+    {% if notempty %}
+    <ul>
+        {% for todo in todos %}
+        {% if todo.important %}
+        <a href="{% url 'viewtodo' todo.pk %}"><li class="important">
+            <span class="todo-title">{{ todo.title }}</span><br>
+            {% if todo.description %}
+            <span class="todo-description">{{ todo.description|truncatechars:140 }}</span><br>
+            {% endif %}
+            <span class="date-created date-added">{{ todo.date_created }}</span>
+        </li>
+        </a>
+        {% else %}
+        <a href="{% url 'viewtodo' todo.pk %}"><li class="normal">
+            <span class="todo-title">{{ todo.title }}</span><br>
+            {% if todo.description %}
+            <span class="todo-description">{{ todo.description|truncatechars:140 }}</span><br>
+            {% endif %}
+            <span class="date-created date-added">{{ todo.date_created }}</span>
+        </li>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    {% else %}
     <div class="empty-todos">
         <p>
             Yahoo.. no todos due for now<br>
             <a href="{% url 'createtodo' %}">Click</a>&nbsp;to create new
         </p>
     </div>
-    {% else %}
-    <ul>
-        {% for todo in todos %}
-        {% if todo.important %}
-        <a href="{% url 'viewtodo' todo.pk %}"><li class="important">
-            <span class="todo-title">{{ todo.title }}</span><br>
-                <span class="date-created">{{ todo.date_created }}</span>
-        </li>
-        </a>
-        {% else %}
-        <a href="{% url 'viewtodo' todo.pk %}"><li class="normal">
-            <span class="todo-title">{{ todo.title }}</span><br>
-                <span class="date-created">{{ todo.date_created }}</span>
-        </li>
-        </a>
-        {% endif %}
-        {% endfor %}
-    </ul>
     {% endif %}
+    <div class="create-round">
+        <a href="{% url 'createtodo' %}"><img src="{% static 'todo/plus.svg' %}" alt="add" title="Create" width="60"></a>
+    </div>
 </div>
 {% endblock content %}

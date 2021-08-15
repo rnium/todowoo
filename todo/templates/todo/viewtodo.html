@@ -1,6 +1,6 @@
 {% extends 'todo/base.html' %}
 {% block content %}
-<div>
+<div class="container">
     <h3>{{ todo.title }}</h3>
     <form method="POST" action="{% url 'viewtodo' pk %}">{% csrf_token %}
         {{ form.as_p }}

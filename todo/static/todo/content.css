@@ -1,7 +1,9 @@
 div.container {
-    color: darkturquoise;
+    color: #00ced1;
     margin-top: 0.5em;
     align-items: center;
+    min-height: 30em;
+    position: relative;
 }
 
 div.container ul li {
@@ -23,6 +25,10 @@ div.container ul li.normal {
 
 div.container ul li.important {
     background-color: rgb(190, 27, 81);
+}
+
+div.container ul li.important:hover {
+    box-shadow: 2px 2px 15px rgb(255, 127, 187);
 }
 
 div.intro {
@@ -184,4 +190,17 @@ span.date-completed {
 .empty-todos {
     margin: 2em 25% 0;
     text-align: center;
+}
+
+.create-round {
+    position: fixed;
+    right: 5%;
+    bottom: 2em;
+    font-size: 2.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+span.todo-description {
+    color: rgb(179, 255, 255);
 }
