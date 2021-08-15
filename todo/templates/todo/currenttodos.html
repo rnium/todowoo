@@ -2,6 +2,14 @@
 {% block content %}
 <h2>Current Todos</h2>
 <div class="container">
+    {% if isempty %}
+    <div class="empty-todos">
+        <p>
+            Yahoo.. no todos due for now<br>
+            <a href="{% url 'createtodo' %}">Click</a>&nbsp;to create new
+        </p>
+    </div>
+    {% else %}
     <ul>
         {% for todo in todos %}
         {% if todo.important %}
@@ -19,5 +27,6 @@
         {% endif %}
         {% endfor %}
     </ul>
+    {% endif %}
 </div>
 {% endblock content %}

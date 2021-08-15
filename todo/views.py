@@ -49,7 +49,10 @@ def logoutuser(request):
 @login_required
 def currentodo(request):
     todos = Todo.objects.filter(author=request.user, date_completed__isnull=True)
-    return render(request, 'todo/currenttodos.html', {'todos': todos})
+    isempty = False
+    if len(todos)<1:
+        isempty = True
+    return render(request, 'todo/currenttodos.html', {'todos': todos, 'isempty': isempty})
 
 
 @login_required

@@ -36,7 +36,7 @@ div.intro div {
     grid-column: 2/4;
 }
 
-.intro-info {
+.intro-info, .empty-todos {
     background-color: rgb(22, 141, 135);
     padding: 1em 3em;
     width: 50%;
@@ -179,4 +179,9 @@ span.date-added {
 span.date-completed {
     margin-left: 1.5em;
     color: deeppink;
+}
+
+.empty-todos {
+    margin: 2em 25% 0;
+    text-align: center;
 }
