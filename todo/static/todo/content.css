@@ -6,11 +6,15 @@ div.container {
     position: relative;
 }
 
+div.container ul {
+    margin: 0 10% 3em;
+}
+
 div.container ul li {
     text-align: left;
     list-style: none;
     padding: 0.5em 2em;
-    margin: 0px 10% 1em;
+    margin: 0px 0 1em;
     border-radius: 0.3em;
     color: wheat;
 
@@ -201,7 +205,7 @@ span.date-completed {
 .create-round {
     position: fixed;
     right: 5%;
-    bottom: 2em;
+    bottom: 1em;
     font-size: 2.5em;
     justify-content: center;
     align-items: center;
