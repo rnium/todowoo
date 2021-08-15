@@ -7,18 +7,20 @@
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="navbar">
                 <div class="logotitle">
                     <img src="{% static 'todo/check.png' %}" width="50" class="logo">
                     <a href="/"><span class="sitetitle">TodoWoo</span></a>
                 </div>
-                <ul class="navitems">
-                    {% if user.is_authenticated %}
-                    <li><a class="navlink" href="{% url 'currentodo' %}">Current</a></li>
-                    <li><a class="navlink" href="{% url 'createtodo' %}">Create</a></li>
-                    <li><a class="navlink" href="{% url 'completedtodos' %}">Completed</a></li>
-                    {% endif %}
-                </ul>
+                <div>
+                    <ul class="navitems">
+                        {% if user.is_authenticated %}
+                        <li><a class="navlink" href="{% url 'currentodo' %}">Current</a></li>
+                        <li><a class="navlink" href="{% url 'createtodo' %}">Create</a></li>
+                        <li><a class="navlink" href="{% url 'completedtodos' %}">Completed</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
                 <div class="user">
                     {% if user.is_authenticated %}
                     <span>logged in as {{ user.username }}</span>

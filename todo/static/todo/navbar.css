@@ -13,19 +13,18 @@ body {
     overflow-x: hidden;
 }
 
-ul.navitems {
-    padding: 12px 0px;
-}
 ul.navitems li {
     font-size: 18px;
     display: inline-block;
-    padding: 0px 10px;
+    padding: 0px 1em;
 }
 
 nav {
     background-color: darkslategrey;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 div.logotitle .logo {
