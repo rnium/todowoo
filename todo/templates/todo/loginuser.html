@@ -3,7 +3,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'todo/auth.css' %}">
 <div class="container">
-    <h2>Login Todowooo</h2>
+    <h2>Login Todowoo</h2>
     {% if error %}
     <div class="error">
         <em>{{ error }}</em>
@@ -11,9 +11,9 @@
     {% endif %}
     <form class="auth" method="POST">{% csrf_token %}
         <label>Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" placeholder="&nbsp;&nbsp;enter your username" required>
         <label>Password:</label>
-        <input type="password" name="password" id="password" required>
+        <input type="password" name="password" id="password" placeholder="&nbsp;&nbsp;enter password" required>
         <input class="savebutton" type="submit" value="Login">
     </form>
     <hr>

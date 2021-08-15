@@ -10,7 +10,7 @@
         <input class="sidebutton completebutton" type="submit" value="Mark as completed">
     </form>
     <form method="POST" action="{% url 'deletetodo' pk %}" style="display: inline;">{% csrf_token %}
-        <input class="sidebutton deletebutton" type="submit" value="Delete">
+        <input class="sidebutton deletebutton" type="submit" value="Delete" onclick="return confirm('Confirm deletion')">
     </form>
 </div>
 {% endblock content %}

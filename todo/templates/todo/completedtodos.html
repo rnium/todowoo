@@ -1,7 +1,8 @@
 {% extends 'todo/base.html' %}
 {% block content %}
-<h2>Completed Todos</h2>
 <div class="container">
+    {% if todos %}
+    <h2>Completed Todos</h2>
     <ul>
         {% for todo in todos %}
         <li class="completedtodo">
@@ -11,5 +12,12 @@
         </li>
         {% endfor %}
     </ul>
+    {% else %}
+    <div class="empty-todos">
+        <p>
+            No todos completed yet
+        </p>
+    </div>
+    {% endif %}
 </div>
 {% endblock content %}

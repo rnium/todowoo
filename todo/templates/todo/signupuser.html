@@ -11,11 +11,11 @@
     {% endif %}
     <form class="registration" method="POST" action="{% url 'signupuser' %}">{% csrf_token %}
         <label>Username:</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" placeholder="&nbsp;&nbsp; choose your username" required>
         <label>Password:</label>
-        <input type="password" name="password1" id="password1" required>
+        <input type="password" name="password1" id="password1" placeholder="&nbsp;&nbsp;enter password" required>
         <label>Confirm Password:</label>
-        <input type="password" name="password2" id="password2" required>
+        <input type="password" name="password2" id="password2" placeholder="&nbsp;&nbsp;retype password" required>
         <input class="savebutton" type="submit" value="Create Account">
     </form>
     <hr>
