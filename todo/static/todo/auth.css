@@ -1,10 +1,16 @@
 .registration #username, .registration #password1, .registration #password2, .auth #username, .auth #password  {
     width: 40%;
     margin: 0 30%;
-    background-color: rgb(161, 161, 161);
+    background-color: rgb(143, 143, 143);
+    border-radius: 0.2em;
     border: 0;
-    border-radius: 5px;
     min-height: 40px;
+    color: rgb(52, 255, 211);
+    padding-left: 0.5em;
+}
+
+.registration #username:focus, .registration #password1:focus, .registration #password2:focus, .auth #username:focus, .auth #password:focus {
+    border-left: 0.3em solid rgb(12, 255, 134);
 }
 
 .registration label, .auth label {
