@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: rgb(109, 109, 109);
+    background-color: #3d5b68;
     overflow-x: hidden;
 }
 
@@ -93,4 +93,24 @@ div.user span {
 
 .user_buttun:hover a {
     color: rgb(77, 77, 167);
+}
+
+.button-intro {
+    display: inline-block;
+    box-sizing: border-box;
+    border-left: 0.5em solid rgb(0, 255, 149);
+    min-width: 10%;
+    width: 12em;
+    margin: 2em 0;
+    padding: 0.7em 1em;
+    color: rgb(3, 119, 119);
+    background-color: rgba(10, 158, 184, 0.781);
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.button-intro:hover {
+    border-left: 2em solid rgb(0, 255, 149);
 }

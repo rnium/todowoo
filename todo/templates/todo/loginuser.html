@@ -9,13 +9,15 @@
         <em>{{ error }}</em>
     </div>
     {% endif %}
-    <form class="auth" method="POST">{% csrf_token %}
-        <label>Username:</label>
-        <input type="text" id="username" name="username" placeholder="&nbsp;&nbsp;enter your username" required>
-        <label>Password:</label>
-        <input type="password" name="password" id="password" placeholder="&nbsp;&nbsp;enter password" required>
-        <input class="savebutton" type="submit" value="Login">
-    </form>
+    <div class="loginform">
+        <form class="auth" method="POST">{% csrf_token %}
+            <label>Username:</label>
+            <input type="text" id="username" name="username" placeholder="&nbsp;&nbsp;enter your username" required>
+            <label>Password:</label>
+            <input type="password" name="password" id="password" placeholder="&nbsp;&nbsp;enter password" required>
+            <input class="savebutton" type="submit" value="Login">
+        </form>
+    </div>
     <hr>
     <p>Need an account? <a href="{% url 'signupuser' %}">SignUp</a> here</p>
 </div>

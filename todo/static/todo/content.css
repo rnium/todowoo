@@ -2,7 +2,7 @@ div.container {
     color: #00ced1;
     margin-top: 0.5em;
     align-items: center;
-    min-height: 30em;
+    min-height: 33em;
     position: relative;
 }
 
@@ -90,7 +90,7 @@ input[name="title"], textarea {
     border: 0;
     border-radius: 4px;
     margin: 0.3em 5% 1em;
-    background-color: rgb(151, 151, 151);
+    background-color: rgb(108, 124, 129);
     min-height: 30px;
     padding: 0.3em 0.5em;
 }
@@ -200,11 +200,16 @@ h3 {
     color: rgb(0, 104, 104);
 }
 
+li.completedtodo {
+    background-color: rgba(0, 153, 255, 0.226);
+    border-left: 0.3em solid rgb(23, 104, 255);
+}
+
 .deletebutton {
     margin: 0.5em 0px;
     width: 7%;
     color: rgb(255, 217, 236);
-    background-color: rgb(116, 33, 33);
+    background-color: rgb(255, 0, 128);
 }
 
 .deletebutton:hover {
@@ -214,11 +219,6 @@ h3 {
 
 h2.completedtodo {
     margin-bottom: 1em;
-}
-
-li.completedtodo {
-    background-color: rgba(2, 54, 151, 0.52);
-    border-left: 0.3em solid rgb(23, 104, 255);
 }
 
 span.date-added {

@@ -15,6 +15,8 @@ def home(request):
         return render(request, 'todo/homepage.html')
 
 def signupuser(request):
+    if request.user.is_authenticated:
+        return redirect(currentodo)
     if request.method == "GET":
         return render(request, 'todo/signupuser.html', {'form': UserCreationForm()})
     else:
@@ -30,6 +32,8 @@ def signupuser(request):
             return render(request, 'todo/signupuser.html', {'form': UserCreationForm(), 'error': 'Passwords doesn\'t match'})
 
 def loginuser(request):
+    if request.user.is_authenticated:
+        return redirect(currentodo)
     if request.method == "GET":
         return render(request, 'todo/loginuser.html', {'form': AuthenticationForm()})
     else:
