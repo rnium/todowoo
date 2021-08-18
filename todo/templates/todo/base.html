@@ -30,8 +30,8 @@
                         <input class="user_buttun" type="submit" value="Logout">
                     </form>
                     {% else %}
-                    <button class="user_buttun"><a href="{% url 'signupuser' %}">SignUp</a></button>
-                    <button class="user_buttun"><a href="{% url 'loginuser' %}">Log in</a></button>
+                    <a class="user_buttun" href="{% url 'signupuser' %}">SignUp</a>
+                    <a class="user_buttun" href="{% url 'loginuser' %}">Log in</a>
                     {% endif %}
                 </div>
             </nav>

@@ -35,20 +35,20 @@ div.logotitle .logo {
 
 .user_buttun {
     color: wheat;
-    background-color: mediumblue;
+    background-image: linear-gradient(to bottom right, rgba(0, 184, 144, 0.959), rgba(0, 48, 207, 0.788));
     border-radius: 20px;
     border: 0px;
     margin: 10px 0px;
-    padding: 5px;
+    padding: 0.5em;
     width: 100px;
     font-size: 14px;
     transition: 0.2s, box-shadow 0.1s;
+    text-align: center;
+    cursor: pointer;
 }
 
 .user_buttun:hover {
-    background-color: wheat;
-    color: mediumblue;
-    box-shadow: 0px 0px 5px 5px rgb(50, 116, 116);
+    box-shadow: 0px 0px 5px 3px rgb(0, 191, 197);
 }
 
 a:link, a:visited {
@@ -88,11 +88,7 @@ div.user span {
 
 .user_buttun a:link, .user_buttun a:visited {
     text-decoration: none;
-    color: wheat;
-}
-
-.user_buttun:hover a {
-    color: rgb(77, 77, 167);
+    color: rgb(255, 254, 251);
 }
 
 .button-intro {
